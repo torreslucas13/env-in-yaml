@@ -1,8 +1,9 @@
 {
   "name": "env-in-yaml",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simplest way to use environment variables in your .yml/.yaml files",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
