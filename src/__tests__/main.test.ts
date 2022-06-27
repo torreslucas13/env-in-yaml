@@ -24,8 +24,7 @@ describe('main', () => {
 
   it('should be able to return the same text if no env variable is found', () => {
     const text = 'www.google-${ENV:S3_BUCKET}.com${ENV:SECRET_KEY}';
-    const expectedResult = 'www.google-${ENV:S3_BUCKET}.com${ENV:SECRET_KEY}';
 
-    expect(envInYaml(text)).toBe(expectedResult);
+    expect(envInYaml(text)).toBe(text);
   });
 });
