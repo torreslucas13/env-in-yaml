@@ -2,7 +2,7 @@ import 'dotenv/config';
 import { END_DELIMITER, START_DELIMITER } from '../constants/replace.constants';
 import { ReplaceOptions } from '../interfaces/replace.interface';
 
-const envVars: string[] = [];
+const envs: string[] = [];
 
 export const getEnvVarsFromString = (text: string, options?: ReplaceOptions) => {
   const startDelimiter = options?.startDelimiter || START_DELIMITER;
@@ -12,14 +12,14 @@ export const getEnvVarsFromString = (text: string, options?: ReplaceOptions) => 
     const middleText = text.split(startDelimiter)[1].split(endDelimiter)[0];
 
     if (middleText) {
-      envVars.push(middleText);
+      envs.push(middleText);
       const newText = text.replace(startDelimiter + middleText + endDelimiter, 'Rand0mText');
 
       getEnvVarsFromString(newText);
     }
-    return envVars;
+    return envs;
   } catch (error) {
-    console.log('No env variable found');
+    return text;
   }
 };
 
