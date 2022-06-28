@@ -43,3 +43,19 @@ const replaced = envInYaml(myVarFromYaml)
 
 ```
 
+### Release History
+- 1.0.0
+  - Initial release
+  
+### Contributing
+Any help is extremely welcome and I would love it! Feel free to submit your PR!
+  
+### Meta
+Lucas Torres [@olucasdev](https://twitter.com/olucasdev)  
+Follow me on Github and Twitter and get in touch !!  
+I will love to talk about tech 😄!  
+https://github.com/torreslucas13  
+
+
+  
+
